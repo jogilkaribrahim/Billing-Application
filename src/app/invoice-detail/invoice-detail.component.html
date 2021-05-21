@@ -1,0 +1,154 @@
+<h3 class="text-center m-5 hide">Invoice Detail {{ invoice.id }}</h3>
+
+<div class="container ">
+    <div class="row">
+        <div class="col-sm text-center ">
+            <h1 class="display-4"><u> UNITED PLASTIC </u>
+            </h1>
+        </div>
+        <div class="col-sm text-center">
+            <p><b> Dealers in plastic scrap,General Scrap, <br> Sry No.:34 Hissa No:4A, Yeolewadi,<br>Kondhwa Budruk Pune-411048.</b></p>
+        </div>
+    </div>
+</div>
+
+
+<div class="row offset-md-2 p-2 ">
+    <div class="col-6">
+        <label><b>Invoice No :- </b></label>{{ invoice.id }}
+    </div>
+
+    <div class="col-6">
+        <label><b>Date :- </b></label>{{ invoice.date | date:'medium' }}
+    </div>
+</div>
+
+
+<div class="row col-md-8 offset-md-2 border border-dark border-darken-1 ">
+
+
+    <div class="container p-2">
+        <div class="row">
+            <div class="col-sm">
+                <label><b>Full Name :-</b></label><br>{{ invoice.fullName | uppercase}}
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-2">
+        <div class="row">
+            <div class="col-sm">
+                <label><b>Address :-</b></label><br>{{ invoice.address | uppercase}}
+            </div>
+            <div class="col-sm">
+                <label><b>Pan NO. :-</b></label><br>{{ invoice.panNo | uppercase}}
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-2 ">
+        <div class="row">
+            <div class="col-sm">
+                <label><b>Registration No. :-</b></label><br>{{ invoice.registrationNo }}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container p-2 ">
+        <div class="row ">
+            <div class="col-sm">
+                <label><b>State :-</b></label><br>{{ invoice.state | uppercase}}
+            </div>
+            <div class="col-sm">
+                <label><b>State Code :-</b></label><br>{{ invoice.stateCode }}
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<hr class="col-md-8 offset-md-2">
+
+<div class="row col-md-8 offset-md-2 mt-4  border border-dark border-darken-1">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Weight</th>
+                <th>Rate</th>
+                <th>Taxable Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let invoice of invoice.products">
+                <td>{{ invoice.productname }}</td>
+                <td>{{ invoice.weight }}</td>
+                <td>{{ invoice.rate }}</td>
+                <td>{{ invoice.taxableamount }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr class="col-md-8 offset-md-2 ">
+<div class="row ">
+    <div class=" col-md-4 offset-md-2">
+        <table class="table  table-bordered mt-3 border-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Transport </th>
+
+                    <th scope="col" style="width: 20%;">{{ invoice.transport }}</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SGST Amount</td>
+                    <td>{{ invoice.sgstamount }}</td>
+
+                </tr>
+                <tr>
+                    <td>CGST</td>
+                    <td>{{ invoice.cgstamount }}</td>
+
+                </tr>
+
+                <tr>
+                    <td>OR <br> IGST</td>
+                    <td>{{ invoice.icgstamount }}</td>
+                </tr>
+                <tr>
+                    <td>Final Total</td>
+                    <td>{{ invoice.finalTotal }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-4 mt-3 border border-dark border-darken-1">
+
+        <h6 class="text-center m-3">RUPEES</h6>
+        <ol>
+            <li>Our responsibility ceases on delivery of the goods to the carrier.</li>
+            <li>payment should be made in 10-15 days.</li>
+            <li>Interest will be charges 21% P.A on overdue bills.</li>
+            <li>Goods once sold will not be taken.</li>
+        </ol>
+        <img src="images.jpg" alt="Nature" class="responsive">
+    </div>
+</div>

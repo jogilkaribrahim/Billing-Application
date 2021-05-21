@@ -1,0 +1,38 @@
+.container-card{
+    padding-top: 2rem;
+}
+
+.hoverView:hover{
+    border-style: solid;
+    border-color: rgb(0, 140, 255);
+    border-radius: 10%;
+    color:rgb(0, 140, 255);
+
+}
+.delete:hover{
+    border-style: solid;
+    border-color: rgb(255, 0, 0);
+    border-radius: 10%;
+    color: rgb(255, 0, 0);
+}
+.edit:hover{
+    border-style: solid;
+    border-color: rgb(105, 105, 105);
+    border-radius: 10%;
+    color:  rgb(105, 105, 105);
+}
+.print:hover{
+    border-style: solid;
+    border-color: rgb(98, 0, 255);
+    border-radius: 10%;
+    color:  rgb(98, 0, 255);
+}
+
+
+.font{
+    font-size: 80%;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 2%;
+  }

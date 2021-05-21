@@ -1,0 +1,151 @@
+<div class="col-md-8 offset-md-2">
+    <form (ngSubmit)="onSubmit()">
+
+
+        <div class="row col-md-12 mb-3">
+            <div class="container-fluid mt-5 ">
+
+                <h4 class="mb-3 text-center ">Reciever's Detail</h4>
+
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" class="form-control mb-2" [(ngModel)]="invoice.fullName" name="fullName" required>
+
+                <label for="adress">Address</label>
+                <input type="address" id="address" class="form-control mb-2" [(ngModel)]="invoice.address" name="address">
+
+                <div class="row">
+                    <div class="col-8">
+                        <label for="state">State</label>
+                        <input type="text" id="state" class="form-control mb-2" [(ngModel)]="invoice.state" name="state">
+                    </div>
+                    <div class="col-4">
+                        <label for="stateCode">State Code</label>
+                        <input type="number" id="stateCode" class="form-control mb-2" [(ngModel)]="invoice.stateCode" name="stateCode">
+                    </div>
+                </div>
+
+
+                <label for="registrationNo">SGST / CGST / ICGST No.</label>
+                <input type="address" id="registrationNo" class="form-control mb-2" [(ngModel)]="invoice.registrationNo" name="registrationNo">
+
+                <label for="panNo">Pan No.</label>
+                <input type="text" id="panNo" class="form-control" [(ngModel)]="invoice.panNo" name="panNo">
+
+
+                <hr class="bg-dark">
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <app-product-items></app-product-items>
+
+
+
+
+        <div class=" row col-md-12 ">
+            <div class="container-fluid ">
+
+                <form autocomplete="off">
+                    <label for="transport">Transport</label>
+                    <input type="text" id="transport" class="form-control mb-2" [(ngModel)]="invoice.transport" name="transport">
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="cgstamount">CGST Amount</label>
+                            <input type="text" id="cgstamount" class="form-control mb-2" [(ngModel)]="invoice.cgstamount" name="cgstamount">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="sgstamount">SGST Amount</label>
+                            <input type="text" id="sgstamount" class="form-control mb-2" [(ngModel)]="invoice.sgstamount" name="sgstamount">
+                        </div>
+                    </div>
+
+                    <h6 class="text-center m-3">OR</h6>
+
+                    <label for="icgstamount">IC GST Amount</label>
+                    <input type="text" id="icgstamount" class="form-control mb-2" [(ngModel)]="invoice.icgstamount" name="icgstamount">
+
+
+
+                    <label for="finalTotal">Final Value</label>
+                    <input type="text" id="finalTotal" class="form-control" [(ngModel)]="invoice.finalTotal" name="finalTotal">
+
+
+                </form>
+                <button mat-raised-button color="warn" class="btn-lg btn-block mb-5 mt-4">Save Invoice</button>
+
+
+            </div>
+
+        </div>
+
+
+
+    </form>
+
+
+
+</div>
+
+
+
+
+<!-- <div class="class form-group ">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" class="form-control" [(ngModel)]="invoice.fullName" name="fullName">
+    
+            <label for="adress">Address</label>
+            <input type="address" id="address" class="form-control" [(ngModel)]="invoice.address" name="address">
+    
+            <label for="state">State</label>
+            <input type="text" id="state" class="form-control" [(ngModel)]="invoice.state" name="state">
+
+            <label for="stateCode">State Code</label>
+            <input type="text" id="stateCode" class="form-control" [(ngModel)]="invoice.stateCode" name="stateCode">
+
+            <label for="panNo">Pan No.</label>
+            <input type="text" id="panNo" class="form-control" [(ngModel)]="invoice.panNo" name="panNo">
+            
+            <label for="Particular">Particular</label>
+            <input type="text" id="Particular" class="form-control" [(ngModel)]="invoice.Particular" name="Particular">
+            
+            <label for="weight">weight</label>
+            <input type="text" id="weight" class="form-control" [(ngModel)]="invoice.weight" name="weight">
+
+            <label for="unit">unit</label>
+            <input type="text" id="unit" class="form-control" [(ngModel)]="invoice.unit" name="unit">
+
+            <label for="rate">Rate</label>
+            <input type="text" id="rate" class="form-control" [(ngModel)]="invoice.rate" name="rate">
+
+            <label for="taxableValue">taxableValue</label>
+            <input type="text" id="taxableValue" class="form-control" [(ngModel)]="invoice.taxableValue" name="taxableValue">
+
+            <label for="transport">transport</label>
+            <input type="text" id="transport" class="form-control" [(ngModel)]="invoice.transport" name="transport">
+
+            <label for="sgstamount">sgstamount</label>
+            <input type="text" id="sgstamount" class="form-control" [(ngModel)]="invoice.sgstamount" name="sgstamount">
+
+            <label for="cgstamount">cgstamount</label>
+            <input type="text" id="cgstamount" class="form-control" [(ngModel)]="invoice.cgstamount" name="cgstamount">
+
+            <label for="icgstamount">icgstamount</label>
+            <input type="text" id="icgstamount" class="form-control" [(ngModel)]="invoice.icgstamount" name="icgstamount">
+
+            <label for="finalTotal">finalTotal</label>
+            <input type="text" id="finalTotal" class="form-control" [(ngModel)]="invoice.finalTotal" name="finalTotal">
+
+
+            <button class="btn btn-success" type="submit">Create Invoice</button>
+
+
+    
+        </div> -->
+<!-- </form></div> -->

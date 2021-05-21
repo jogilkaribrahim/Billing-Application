@@ -1,0 +1,89 @@
+<div class="col-md-8 offset-md-2">
+    <form (ngSubmit)="onSubmit()">
+
+
+        <div class="row col-md-8  offset-md-2 ">
+            <div class="container-fluid mt-5 p-5 border border-warning border-1 rounded">
+
+                <h4 class="mb-3 text-center">Reciever's Detail</h4>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" class="form-control mb-2" [(ngModel)]="invoice.fullName" name="fullName">
+
+                <label for="adress">Address</label>
+                <input type="address" id="address" class="form-control mb-2" [(ngModel)]="invoice.address" name="address">
+
+                <div class="row">
+                    <div class="col-8">
+                        <label for="state">State</label>
+                        <input type="text" id="state" class="form-control mb-2" [(ngModel)]="invoice.state" name="state">
+                    </div>
+                    <div class="col-4">
+                        <label for="stateCode">State Code</label>
+                        <input type="number" id="stateCode" class="form-control mb-2" [(ngModel)]="invoice.stateCode" name="stateCode">
+                    </div>
+                </div>
+
+
+                <label for="registrationNo">SGST / CGST / ICGST No.</label>
+                <input type="address" id="registrationNo" class="form-control mb-2" [(ngModel)]="invoice.registrationNo" name="registrationNo">
+
+                <label for="panNo">Pan No.</label>
+                <input type="text" id="panNo" class="form-control" [(ngModel)]="invoice.panNo" name="panNo">
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        <div class=" row col-md-8 offset-md-2 ">
+            <div class="container-fluid p-5 border border-warning border-1 rounded">
+
+                <form autocomplete="off">
+                    <label for="transport">Transport</label>
+                    <input type="text" id="transport" class="form-control mb-2" [(ngModel)]="invoice.transport" name="transport">
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="cgstamount">CGST Amount</label>
+                            <input type="text" id="cgstamount" class="form-control mb-2" [(ngModel)]="invoice.cgstamount" name="cgstamount">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="sgstamount">SGST Amount</label>
+                            <input type="text" id="sgstamount" class="form-control mb-2" [(ngModel)]="invoice.sgstamount" name="sgstamount">
+                        </div>
+                    </div>
+
+                    <h6 class="text-center m-3">OR</h6>
+
+                    <label for="icgstamount">IC GST Amount</label>
+                    <input type="text" id="icgstamount" class="form-control mb-2" [(ngModel)]="invoice.icgstamount" name="icgstamount">
+
+
+
+                    <label for="finalTotal">Final Value</label>
+                    <input type="text" id="finalTotal" class="form-control" [(ngModel)]="invoice.finalTotal" name="finalTotal">
+
+
+                </form>
+                <button type="submit" class="btn btn-warning btn-lg btn-block mb-2  mt-4">Save and Print</button>
+
+            </div>
+
+        </div>
+
+
+
+    </form>
+
+
+
+</div>

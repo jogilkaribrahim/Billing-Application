@@ -1,0 +1,40 @@
+@media print {
+    button {
+      display: none;
+    }
+  }
+
+  @media print {
+    h3 {
+      display: none;
+    }
+  }
+
+  .title {
+    font-size: calc(1.525rem + 3.3vw);
+  }
+  
+  @media (min-width: 1200px) {
+    .title {
+      font-size: 4rem;
+    }
+  }
+  
+  .subtitle {
+    font-size: calc(1.525rem + 3.3vw);
+  }
+  
+  @media (min-width: 1200px) {
+    .subtitle {
+      font-size: 4rem;
+    }
+  }
+  @media print {
+    app-main-nav {
+      display: none;
+    }
+  }
+  .img-thumbnail{
+    width: 150px;
+    height: 150px;
+  }
